@@ -1,0 +1,22 @@
+{% extends 'backstage/user/base.html' %}
+
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+{% block title %}欢迎来到后台管理系统{% endblock %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>后台首页 <small>欢迎您使用后台</small></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="clearfix"></div>
+            {% include "backstage/user/index/tabletwo.html" %}
+        </div>
+    </div>
+
+{% endblock %}

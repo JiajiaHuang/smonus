@@ -1,0 +1,90 @@
+  <div class="wrap-sticky" style="height: 56px;">
+    <nav class="navbar navbar-inverse navbar-sticky navbar-mobile bootsnav">
+        <div class="container">
+            <div class="attr-nav" style="position: inherit;">
+                <ul>
+                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#user-modal"><i class="fa fa-user"></i></a></li>
+                    <li class="side-menu"><a href="javascript:void(0)"><i class="fa fa-bars"></i></a></li>
+                    <li id="btn-search1"><a href="javascript:void(0)" id="btn-search2"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
+            <!-- Start Header Navigation -->
+            <div class="navbar-header" style="position: inherit;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="{% url 'index.html' %}"><img src="{% static 'front/assets/img/logo-white.png' %}" class="logo" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            {% include "front/black/header/navbar_collapse/navbar-collapse.html" %}
+
+        </div>
+        <div class="side" id="side">
+            <a href="#" class="close-side"><i class="ti-close"></i></a>
+            <div class="widget">
+                <h3 class="widget-title">{{ index_info.CustomPagesHeader1.page_name }}</h3>
+                <ul class="link">
+                    <li><a href="{{ index_info.CustomPagesHeader2.page_url }}" >{{ index_info.CustomPagesHeader2.page_name }}</a></li>
+                    <li><a href="{{ index_info.CustomPagesHeader3.page_url }}" >{{ index_info.CustomPagesHeader3.page_name }}</a></li>
+                    <li><a href="{{ index_info.CustomPagesHeader4.page_url }}" >{{ index_info.CustomPagesHeader4.page_name }}</a></li>
+                    <li><a href="{{ index_info.CustomPagesHeader5.page_url }}" >{{ index_info.CustomPagesHeader5.page_name }}</a></li>
+                    <li><a href="{{ index_info.CustomPagesHeader6.page_url }}" >{{ index_info.CustomPagesHeader6.page_name }}</a></li>
+                </ul>
+                    </div>
+                    <div class="latest_post_widget">
+                <h3 class="widget-title">{% trans "Latest Post" %}</h3>
+                <div class="media latest_post">
+                    <a class="media-left" href="">
+                        <img src="{% static 'front/assets/img/100x70-1.jpg' %}" class="media-object" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
+                        <div class="entry-meta">
+                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.latest post -->
+                <div class="media latest_post">
+                    <a class="media-left" href="">
+                        <img src="{% static 'front/assets/img/100x70-2.jpg' %}" class="media-object" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
+                        <div class="entry-meta">
+                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.latest post -->
+                <div class="media latest_post">
+                    <a class="media-left" href="">
+                        <img src="{% static 'front/assets/img/100x70-3.jpg' %}" class="media-object" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h6 class="media-heading"><a href="#">The <em>Best Street-Style</em> Pics Copenhagen</a></h6>
+                        <div class="entry-meta">
+                    <span class="entry-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><time datetime="2018-01-21T19:00">Jan 21, 2018</time></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.latest post -->
+                    </div>
+                    <!-- /.End of latest post -->
+                    <div class="social_share_btn">
+                <h3 class="widget-title">{% trans "Subscribe" %}</h3>
+                <ul>
+                    <li class="li-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+                    <li class="li-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+                    <li class="li-google-plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i> Google +</a></li>
+                    <li class="li-pinterest"><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i> Pinterest</a></li>
+                </ul>
+            </div>
+            <!-- /.End of subscribe -->
+        </div>
+        <!-- /. End of side menu -->
+        <div class="side-overlay"></div>
+    </nav>
+  </div>

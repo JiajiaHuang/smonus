@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="DEscription" content="">
+    <meta name="Author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    {% block hightcss %}{% endblock %}
+    <style>
+    @media (min-width: 1300px){
+        .container {
+            width: 1300px;
+        }
+    }
+
+        @media (min-width: 993px){
+            nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a, .megamenu-content li .col-menu ul.menu-col li a, nav.navbar.bootsnav ul.nav.nav-tabs > li > a {
+                color: #222;
+                padding: 2px 12px;
+                font-size: 14px;
+            }
+
+        }
+        @media (min-width: 993px){
+            .megamenu-content li .col-menu ul.menu-col li strong {
+                color: #222;
+                padding: 8px 12px;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    {% block bodymain %}{% endblock %}
+    {% block script %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+{% extends 'backstage/user/base.html' %}
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+{% block title %}欢迎来到后台管理系统{% endblock %}
+{% block hightcss %}
+    <link rel="stylesheet" href="{% static 'backstage/css/prettify.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'backstage/css/switchery.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'backstage/css/jquery.tagsinput.css' %}" />
+
+    <style>
+
+    .x_panel img{
+        height: 700px;
+    }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>修改关键词 <small>欢迎您使用WAITING博客后台</small></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% include "backstage/user/keywords/keywords.html" %}
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block hightjs %}
+    <script src={% static "backstage/js/jquery.tagsinput.js" %}></script>
+    <script src={% static "backstage/js/prettify.js" %}></script>
+    <script src={% static "backstage/js/moment.min.js" %}></script>
+    <script src={% static "backstage/js/bootstrap-wysiwyg.min.js" %}></script>
+    <script src={% static "backstage/js/jquery.hotkeys.js" %}></script>
+    <script src={% static "backstage/js/switchery.min.js" %}></script>
+    <script src={% static "backstage/js/jquery.cookie.js" %}></script>
+
+
+    <script>
+    $("#myselect").change(function(){
+        var opt=$("#myselect").val();
+        window.location.href="/user/modifykeywords/?site="+opt;
+    });
+    </script>
+{% endblock %}

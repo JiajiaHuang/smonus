@@ -1,0 +1,66 @@
+{% extends 'backstage/user/base.html' %}
+
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+{% block title %}欢迎来到后台管理系统{% endblock %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>管理员增加 <small></small></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            {% include "backstage/user/AdminManage/changeaccount.html" %}
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block hightjs %}
+<script type="text/javascript">
+    // 详情介绍页面
+    function sc(cz,zh,mm,result) {
+        var data = new FormData();
+        if (cz==="add"){
+        data.append("zh",$(zh)[0].value);
+        }else {
+        data.append("zh",zh);
+        }
+        data.append("cz",cz);
+        data.append("mm",$(mm)[0].value);
+        $.ajax({
+            url: "/management-admin/post-admin/",
+            type: 'POST',
+            data:data,
+            cache: false,
+            processData: false,
+            dataType:'json',
+            contentType: false
+        }).done(function (ret) {
+             console.log(ret);
+            if (ret['isSuccess']) {
+                if (cz==="xg"){
+                   $(result).text(ret['f']);
+                    $(mm).attr("type", "button");
+                    $(mm).attr("onclick", "sk('"+mm+"')");
+                }else {
+                    window.location.reload()
+                }
+            } else {
+                alert("上传失败")
+            }
+        });
+        return false;
+    } 
+    function sk(cz) {
+        $(cz).attr("type", "text");
+        $(cz).attr("onclick", "");
+    }
+    </script>
+{% endblock %}

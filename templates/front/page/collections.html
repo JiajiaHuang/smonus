@@ -1,0 +1,103 @@
+{% extends 'front/black/base-black.html' %}
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+{% block title %}欢迎来到后台管理系统{% endblock %}
+{% block hightcss %}
+    <link href="{% static 'front/assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'front/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/animsition.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/themify-icons/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/bootsnav.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/fluidbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block bodymain %}
+    <div class="main-content ">
+        {% include "front/black/header/top-header.html" %}
+        {% include "front/black/header/wrap-sticky.html" %}
+        <div class="clearfix"></div>
+        {% include "front/package/search.html" %}
+        {% include "front/package/collections-view.html" %}
+        {% include "front/package/newslatter.html" %}
+        {% include "front/package/insta-content.html" %}
+        {% include "front/black/footer/footer-black.html" %}
+
+    </div>
+
+{% endblock %}
+
+
+
+{% block script %}
+             <script src="{% static 'front/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/animsition.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/bootsnav.js' %}"></script>
+        <script src="{% static 'front/assets/js/macy.js' %}"></script>
+        <script src="{% static 'front/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/ResizeSensor.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/theia-sticky-sidebar.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'front/assets/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/modernizr.custom.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.gridrotator.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/parallax-background.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.simpleSocialShare.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.fluidbox.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/retina.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.shuffle.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/readingTime.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/custom.js' %}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js-key=AIzaSyDcMXKkIZSG1Ev3nNkDE5vZpfT_KG9zBT8" ></script>
+        <script>
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 6,
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(23.8103968, 90.41256666), //Dhaka
+
+                    // How you would like to style the map.
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType": "administrative", "elementType": "http://osruhtml.bdtask.com/osru_demo/labels.text.fill", "stylers": [{"color": "#444444"}]}, {"featureType": "landscape", "elementType": "all", "stylers": [{"color": "#f2f2f2"}]}, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]}, {"featureType": "road", "elementType": "all", "stylers": [{"saturation": -100}, {"lightness": 45}]}, {"featureType": "road.highway", "elementType": "all", "stylers": [{"visibility": "simplified"}]}, {"featureType": "road.arterial", "elementType": "http://osruhtml.bdtask.com/osru_demo/labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "transit", "elementType": "all", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "all", "stylers": [{"color": "#d17c78"}, {"visibility": "on"}]}]
+                };
+
+                // image from external URL
+                var myIcon = 'assets/img/icon/marker.png'/*tpa=http://osruhtml.bdtask.com/osru_demo/assets/img/icon/marker.png*/;
+
+                //preparing the image so it can be used as a marker
+                //https://developers.google.com/maps/documentation/javascript/reference#Icon
+                //includes hacky fix "size" to allow for wobble
+                var catIcon = {
+                    url: myIcon
+                };
+
+                // Get the HTML DOM element that will contain your map
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(23.8103968, 90.41256666), //Dhaka
+                    map: map,
+                    icon: catIcon,
+                    title: 'Snazzy!',
+                    animation: google.maps.Animation.DROP,
+                });
+            }
+        </script>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% load staticfiles %}
+<div class="flexslider slider">
+    <ul class="slides">
+        {% for cd in carousel_display %}
+            <li><a href="{{cd.carousel_url}}"><img src="/static/{{ cd.carousel_img }}"  alt="{{ cd.carousel_info }}"/></a></li>
+        {% endfor %}
+    </ul>
+</div>

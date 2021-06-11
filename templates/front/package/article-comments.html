@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<div class="page-content" style="border-top: 1px solid #eaeaea;padding: 20px 0 0px;">
+    <div class="container">
+        <div class="content-push">
+            <h3 class="product-subtitle">{{ article.comment_count }} comments</h3>
+        </div>
+        {% for foo in comment %}
+            {% if foo.state  %}
+            <div class="comment" style="padding: 10px 0">
+            <div class="comment_title">
+                <p class="comment-title" style=><strong>{{foo.author}}: {{foo.created}}</strong></p>
+                <div class="row">
+                <div class="col-sm-1 col-md-1 " style="width: 100px;float: left;" >
+                    <img src="/static/front/assets/img/instagram/04.jpg" alt="" style="width: 90%;margin: auto">
+                </div>
+                <div class="col-sm-11 col-md-11 " style="float: left;">
+                    <p>{{foo.content}}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+            {% endif %}
+            
+
+        {% endfor %}
+
+        {% include "front/package/article-recommend.html" %}
+
+    </div>
+</div>

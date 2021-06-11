@@ -1,0 +1,86 @@
+{% load staticfiles %}
+{% load i18n %}
+     <div class="page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 p_r_40">
+                                <div class="contact-info">
+                                    <div class="contact-address">
+                                        <div class="contact-text">
+                                            <h3>{% trans "Contact Info" %}</h3>
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                                                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
+                                                Hampden-Sydney College in Virginia.</p>
+                                        </div>
+                                        <div class="address-info">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <img src="/static/front/assets/img/icon/agenda.png" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="addon-title">{% trans "Address" %}</h4>
+                                                    <div class="addon-text"> 1355 Market Street, Suite 900<br>
+                                                        San Francisco, CA 94103</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="address-info">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <img src="/static/front/assets/img/icon/email.png" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="addon-title">{% trans "Email Address" %}</h4>
+                                                    <div class="addon-text"><a href="#"  class="__cf_email__" data-cfemail="06757376766974724669757473686371752865696b">[email&#160;protected]</a><br>
+                                                        <a href="#"  class="__cf_email__" data-cfemail="b5fcdbd3daf5dac6c7c0dbd0c2c69bd6dad8">[email&#160;protected]</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="address-info">
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <img src="/static/front/assets/img/icon/phone.png" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="addon-title">{% trans "Phone Number" %}</h4>
+                                                    <div class="addon-text">{% trans "Support" %}: +123 456 789<br>
+                                                        {% trans "Sales" %}: +098 765 4321</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-form">
+                                        <h3>{% trans "Feedback" %}</h3>
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="textarea" rows="5"></textarea>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="name" class="col-sm-3 col-md-2 col-form-label">{% trans "Name" %} *</label>
+                                            <div class="col-sm-6 col-md-5">
+                                                <input class="form-control" id="name2" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="email" class="col-sm-3 col-md-2 col-form-label">{% trans "Email" %} *</label>
+                                            <div class="col-sm-6 col-md-5">
+                                                <input class="form-control" id="email2" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="col-sm-3 col-md-2 col-form-label">{% trans "Website" %}</label>
+                                            <div class="col-sm-6 col-md-5">
+                                                <input class="form-control" id="website" type="text">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn link-btn">{% trans "Submit" %} ⇾</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p_l_40">
+                                <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+                                <div id="map" class="gmap1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="height_30"></div>
+                </div>

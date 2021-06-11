@@ -1,0 +1,56 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="page-content">
+    <div class="container">
+        <div class="content-push">
+            <div class="breadcrumb-box">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">T-shirts</a>
+                <a href="#">Careers</a>
+                <a href="#">T-shirt Stampata</a>
+            </div>
+
+            <div class="information-blocks">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 information-entry">
+                        <div class="product-detail-box" style="margin-bottom: 20px">
+                            <h1 class="product-title">{{ article.title }}</h1>
+                            <h3 class="product-subtitle">{{ article.subtitle }}</h3>
+
+
+                            <div class="share-box detail-info-entry">
+                                <div class="title">{% trans "Share in social media" %}</div>
+                                <div class="socials-box">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="product-detail-box">
+                            {{ article.content | safe }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="clear visible-xs visible-sm"></div>
+                </div>
+                {% include "front/package/article-comments.html" %}
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+

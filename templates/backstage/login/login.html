@@ -1,0 +1,39 @@
+{% extends 'backstage/login/loginbase.html' %}
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+{% block title %}Smonu后台管理系统{% endblock %}
+{% block login %}
+
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+                            <h1>Smonu后台管理系统</h1>
+
+            <section  class="login_content">
+                <form method="post" action="{% url "login" %}" >{% csrf_token %}
+                    <h1>登录账号</h1>
+                    <div>
+                        <input type="text" class="form-control" name="username" placeholder="账号" required="" />
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" name="password" placeholder="密码" required="" />
+                    </div>
+                    <div>
+                    <input class="btn btn-default submit" id="jsEmailRegBtn" type="submit" value="登录" />
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="separator">
+                    <div class="clearfix"></div>
+                    <br/>
+
+                    {% include "backstage/login/loginfooter.html" %}
+
+                  </div>
+                </form>
+          </section>
+        </div>
+     </div>
+    </div>
+{% endblock %}

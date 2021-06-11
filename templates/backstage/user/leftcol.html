@@ -1,0 +1,104 @@
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+        <div class="col-md-3 left_col" style="">
+          <div class="left_col scroll-view">
+            <div class=" nav_title" style="border: 0;height: 0">
+            </div>
+
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="{{ user.image }}" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>欢迎</span>
+                <h2>{{ user.nick_name }}</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>管理页面</h3>
+                <ul class="nav side-menu">
+                  <li>
+                      <a href={% url "management-admin" %}><i class="fa fa-home"></i> 后台首页 </a>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> 内容管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/login.html" %}>文章管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>新闻管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>图片管理</a></li>
+
+                    </ul>
+                  </li>
+                    <li><a><i class="fa fa-desktop"></i> 产品管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/login.html" %}>产品管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>产品推广</a></li>
+                    </ul>
+                  </li>
+                    <li><a><i class="fa fa-desktop"></i> 页面管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/login.html" %}>首页（Home）</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>人类头发（Human Hair）</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>合成头发（Synthetic）</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>花边头发（Lace Front）</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>联系（Contact）</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>关于（About）</a></li>
+
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> 信息管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/login.html" %}>网站基本信息</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>下拉菜单管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>SEO管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>文章页管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>广告管理</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>社交管理</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>客户关系</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bug"></i> 客户资料 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/login.html" %}>客户信息</a></li>
+                      <li><a href={% url "management-admin/login.html" %}>客户收集</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>管理</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bug"></i> 个人资料 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/information.html" %}>个人信息</a></li>
+                      <li><a href={% url "management-admin/reset-password.html" %}>密码修改</a></li>
+                    </ul>
+                  </li>
+                    <li><a><i class="fa fa-bug"></i> 管理员管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href={% url "management-admin/admin-manage.html" %}>管理员列表</a></li>
+                      <li><a href={% url "management-admin/information.html" %}>角色管理</a></li>
+                      <li><a href={% url "management-admin/information.html" %}>权限管理</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+            {% include "backstage/user/footerbuttons.html" %}
+
+          </div>
+        </div>

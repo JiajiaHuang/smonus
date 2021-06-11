@@ -1,0 +1,108 @@
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>所有文章 <small>列表</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li ><a style="color: #000000" href={% url "user/newarticle.html" %}>新建</a></li>
+
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div class="table-responsive">
+                        <div class="row" style="    margin-right:5px;margin-left: 5px">
+                            <div class="col-sm-12">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+
+                            <th class="column-title">文章名称 </th>
+                            <th class="column-title">发布时间 </th>
+                            <th class="column-title">文章是否已处理 </th>
+
+                            <th class="column-title no-link last"><span class="nobr">处理</span>
+                            </th>
+                            <th class="bulk-actions" colspan="7">
+                              <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for foo in article %}
+                            <tr class="even pointer">
+                                <td class=" "><a href="/bbs/article/{{ foo.title_id }}">{{ foo.title }}</a></td>
+                                <td class=" ">{{ foo.f_time }}</td>
+                                <td class=" ">{% if foo.column %} 已增加SEO {% else %} <p style="color: red;margin: 0">未处理</p> {% endif %} </td>
+                                <td class=" last">
+                                    <a href="/userauth/modifyarticle/{{ foo.title_id }}">修改</a><a href="/userauth/artdelete/{{ foo.title_id }}" style="margin-left: 10px">删除</a>
+                                </td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+                            </div>
+                                            </div>
+
+                        <div class="row" style="margin-right:5px;margin-left: 5px">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info" id="datatable_info" style="padding-top: 8px;white-space: nowrap;" role="status" aria-live="polite">Showing {{ page.page_numb_now }} to {{ page.page_ }} of {{ page.count }} entries</div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+                                    <ul class="pagination" style="margin-bottom: 5px;margin-top: 5px">
+                                        <li class="paginate_button previous {% if page.previous %} disabled{% endif %}" id="datatable_previous">
+                                            <a href="/userauth/articleview/?page={{ page.page_numb_now|add:-1 }}" aria-controls="datatable" data-dt-idx="0" tabindex="0">上一页</a>
+                                        </li>
+                                    {% if page.nine %}
+                                        {% for pl in page.pagelist %}
+                                        <li class="paginate_button {% ifequal page.page_numb_now pl %} active{% endifequal %}">
+                                            <a href="/userauth/articleview/?page={{ pl }}" aria-controls="datatable" data-dt-idx="1" tabindex="0">{{ pl }}</a>
+                                        </li>
+                                        {% endfor %}
+
+                                    {% else %}
+                                        {% for pl in page.pro %}
+                                            <li class="paginate_button {% ifequal page.page_numb_now pl %} active{% endifequal %}">
+                                                <a href="/userauth/articleview/?page={{ pl }}" aria-controls="datatable" data-dt-idx="1" tabindex="0">{{ pl }}</a>
+                                            </li>
+                                        {% endfor %}
+                                        <li class="paginate_button {% ifequal page.page_numb_now pl %} active{% endifequal %}">
+                                               <a  aria-controls="datatable" data-dt-idx="1" tabindex="0">...</a>
+                                        </li>
+                                        {% ifequal page.Predecessor page.Rear %}
+
+                                            {% for pl in page.int %}
+                                            <li class="paginate_button {% ifequal page.page_numb_now pl %} active{% endifequal %}">
+                                                <a href="/userauth/articleview/?page={{ pl }}" aria-controls="datatable" data-dt-idx="1" tabindex="0">{{ pl }}</a>
+                                            </li>
+                                        {% endfor %}
+
+                                                                                 <li class="paginate_button {% ifequal page.page_numb_now pl %} active{% endifequal %}">
+                                             <a  aria-controls="datatable" data-dt-idx="1" tabindex="0">...</a>
+                                            </li>
+                                        {% endifequal %}
+
+                                        {% for pl in page.rea %}
+                                            <li class="paginate_button {% ifequal page.page_numb_now pl %} active{% endifequal %}">
+                                                <a href="/userauth/articleview/?page={{ pl }}" aria-controls="datatable" data-dt-idx="1" tabindex="0">{{ pl }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
+                                        <li class="paginate_button next {% if page.next %} disabled{% endif %}" id="datatable_next">
+                                            <a href="/userauth/articleview/?page={{ page.page_numb_now|add:1 }}" aria-controls="datatable" data-dt-idx="7" tabindex="0">下一页</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>

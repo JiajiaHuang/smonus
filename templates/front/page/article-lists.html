@@ -1,0 +1,124 @@
+{% extends 'front/black/base-black.html' %}
+{% load staticfiles %}
+
+{% block title %}欢迎来到后台管理系统{% endblock %}
+{% block hightcss %}
+        <link href="{% static 'front/assets/img/favicon.png' %}" rel="icon">
+        <link href="{% static 'front/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/css/animsition.min.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/themify-icons/themify-icons.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/css/bootsnav.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/css/magnific-popup.css' %}" rel="stylesheet">
+        <link href="{% static 'front/assets/css/fluidbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'front/css/idangerous.swiper.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'front/assets/css/style.css' %}" rel="stylesheet">
+    <style>
+
+    .swiper-slide{
+        width: 20%;
+    }
+    .product-thumbnails-swiper .paddings-container{
+            padding: 5px 4px;
+     }
+    .detail-info-entry a{
+        color: black;
+        padding: 5px;
+        text-decoration: black underline ;
+    }
+    .detail-info-entry a:hover{
+        color: #d17c78;
+        text-decoration:  #d17c78 underline ;
+    }
+    .inline-product-entry .content{
+        margin-left: 0px;
+        text-decoration: underline;
+        text-align: center;
+    }
+    .inline-product-entry .content .cell-view{
+        width: 33.33%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .size-selector .entry{
+        width: auto;
+
+        margin-top: 12px;
+        line-height: 40px;
+        text-transform:capitalize;
+        padding: 0;
+    }
+
+    .entry img {
+        width: 100%;
+        overflow:hidden;
+        z-index: 1;
+        height: 100%;
+    }
+    .entry{padding: 0}
+    .color-selector .entry{
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 0px;
+        cursor: pointer;
+        position: relative;
+        line-height: 35px;
+        padding: 5px;
+    }
+    </style>
+{% endblock %}
+
+{% block bodymain %}
+    <div class="main-content ">
+        {% include "front/black/header/top-header.html" %}
+        {% include "front/black/header/wrap-sticky.html" %}
+        {% include "front/black/header/user-modal.html" %}
+
+        <div class="clearfix"></div>
+        {% include "front/package/search.html" %}
+        {% include "front/package/page-header.html" %}
+
+        {% include "front/package/article-lists.html" %}
+
+        {% include "front/package/newslatter.html" %}
+        {% include "front/package/insta-content.html" %}
+        {% include "front/black/footer/footer-black.html" %}
+
+    </div>
+
+{% endblock %}
+
+{% block script %}
+        <script data-cfasync="false" src="{% static 'front/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/jquery.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/bootstrap.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/animsition.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/bootsnav.js' %}" ></script>
+        <script src="{% static 'front/assets/js/macy.js' %}" ></script>
+        <script src="{% static 'front/assets/js/imagesloaded.pkgd.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/ResizeSensor.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/theia-sticky-sidebar.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/jquery.magnific-popup.min.js' %}" ></script>
+        <script src="{% static 'front/assets/owl-carousel/owl.carousel.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/modernizr.custom.js' %}" ></script>
+        <script src="{% static 'front/assets/js/jquery.gridrotator.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/parallax-background.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/jquery.simpleSocialShare.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/jquery.fluidbox.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/retina.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/jquery.shuffle.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/readingTime.min.js' %}" ></script>
+        <script src="{% static 'front/assets/js/custom.js' %}" ></script>
+        <script src="{% static 'front/js/jquery-2.1.3.min.js' %}" ></script>
+        <script src="{% static 'front/js/idangerous.swiper.min.js' %}" ></script>
+        <script src="{% static 'front/js/global.js' %}"></script>
+
+        <!-- custom scrollbar -->
+        <script src="{% static 'front/js/jquery.mousewheel.js' %}" ></script>
+        <script src="{% static 'front/js/jquery.jscrollpane.min.js' %}"></script>
+{% endblock %}

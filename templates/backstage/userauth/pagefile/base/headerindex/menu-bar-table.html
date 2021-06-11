@@ -1,0 +1,573 @@
+{% load staticfiles %}
+<!--begin::Portlet-->
+<div class="kt-portlet">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                菜单栏表
+            </h3>
+        </div>
+    </div>
+    <!--begin::Form-->
+
+    <div class="kt-section">
+        <div class="kt-section__content">
+            <div class="kt-portlet__body">
+                <span class="kt-section__info">
+                    修改首页菜单栏目名称和URL
+                </span>
+
+                <ul class="nav nav-pills nav-fill" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#kt_tabs_5_1">假发栏目· ①</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#kt_tabs_5_2">假发栏目· ②</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#kt_tabs_5_3">假发栏目· ③</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#kt_tabs_5_4">假发栏目· ④</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#kt_tabs_5_5">Care栏目· ①</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#kt_tabs_5_6">Care栏目· ②</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#kt_tabs_5_7">Care栏目· ③</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="kt_tabs_5_1" role="tabpanel">
+                            <span class="kt-section__info">
+                                设置第一行菜单
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+                                        <th>菜单繁体</th>
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>
+                                            处理
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_4"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+                                        </th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_1 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=1&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=1&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=1&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=1&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_4" url="1" column="假发栏目· ①· 增加" %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="kt_tabs_5_2" role="tabpanel">
+                                   <span class="kt-section__info">
+                                Using the most basic table markup, here’s how tables look in Metronic:
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+
+                                        <th>菜单繁体</th>
+
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>
+                                            处理
+
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_5"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_2 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=2&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=2&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=2&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=2&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_5" url="2" column="假发栏目· ② · 增加" %}
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="kt_tabs_5_3" role="tabpanel">
+                                                <span class="kt-section__info">
+                                Using the most basic table markup, here’s how tables look in Metronic:
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+
+                                        <th>菜单繁体</th>
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>
+                                            处理
+
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_6"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_3 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                              <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=3&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=3&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=3&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=3&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_6" url="3" column="假发栏目· ③ · 增加" %}
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="kt_tabs_5_4" role="tabpanel">
+                                          <span class="kt-section__info">
+                                Using the most basic table markup, here’s how tables look in Metronic:
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+                                        <th>菜单繁体</th>
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>
+                                            处理
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_7"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_4 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                             <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=4&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=4&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=4&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=4&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_7" url="4" column="假发栏目· ④ · 增加" %}
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane " id="kt_tabs_5_5" role="tabpanel">
+                                            <span class="kt-section__info">
+                                Using the most basic table markup, here’s how tables look in Metronic:
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+
+                                        <th>菜单繁体</th>
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>
+                                            处理
+
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_8"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_5 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                             <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=5&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=5&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=5&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=5&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_8" url="5" column="Care栏目· ① · 增加" %}
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane " id="kt_tabs_5_6" role="tabpanel">
+                                   <span class="kt-section__info">
+                                Using the most basic table markup, here’s how tables look in Metronic:
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+
+                                        <th>菜单繁体</th>
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>
+                                            处理
+
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_9"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_6 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                             <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=6&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=6&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=6&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=6&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_9" url="6" column="Care栏目· ② · 增加" %}
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane " id="kt_tabs_5_7" role="tabpanel">
+                                 <span class="kt-section__info">
+                                Using the most basic table markup, here’s how tables look in Metronic:
+                            </span>
+                        <div class="kt-section">
+                            <div class="kt-section__content">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>菜单名称</th>
+                                        <th>菜单URL</th>
+                                        <th>菜单简体</th>
+
+                                        <th>菜单繁体</th>
+                                        <th>菜单英文</th>
+                                        <th>菜单法文</th>
+                                        <th>菜单西班牙文</th>
+                                        <th>菜单葡萄牙文</th>
+                                        <th>
+                                            处理
+
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    data-toggle="modal" data-target="#kt_modal_10"
+                                                    style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                    class="la flaticon2-add-1"></i></button>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for athlete in adminMenuList.menu_7 %}
+                                        <tr>
+                                            <th scope="row">{{ athlete.menu_order }}</th>
+                                            <td>{{ athlete.menu_mc }}</td>
+                                            <td>{{ athlete.url }}</td>
+                                            <td>{{ athlete.nenu_names_zh_hans }}</td>
+
+                                            <td>{{ athlete.nenu_names_zh_hant }}</td>
+                                            <td>{{ athlete.nenu_names_en }}</td>
+                                            <td>{{ athlete.nenu_names_fr }}</td>
+                                            <td>{{ athlete.nenu_names_pt }}</td>
+                                            <td>{{ athlete.nenu_names_es }}</td>
+                                             <td>
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'del_menu.html' %}?menu=7&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-cross"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu.html' %}?menu=7&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-pen"></i></button>
+
+                                                <button type="button"
+                                                        class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_add.html' %}?menu=7&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-down"></i></button>
+
+                                                <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                        onclick="window.open('{% url 'change_menu_dir.html' %}?menu=7&menu_order={{ athlete.menu_order }}','_self');"><i
+                                                        class="la flaticon2-up"></i></button>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+                                {% include "backstage/userauth/pagefile/base/headerindex/addform/addcolumn.html" with kt_modal="kt_modal_10" url="7" column="Care栏目· ③ · 增加" %}
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!--end::Form-->
+
+<!--end::Portlet-->

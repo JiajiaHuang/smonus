@@ -1,0 +1,167 @@
+{% load staticfiles %}
+<div class="kt-portlet">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                文章基本信息
+            </h3>
+        </div>
+    </div>
+    <div class="kt-portlet__body">
+        <div class="modal-body ">
+            <form class="kt-form kt-form--label-right"
+                  action="{% url 'edit-basic-article' %}?title_id={{ article.title_id }}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                <div class="kt-portlet__body">
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">标题编号:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <input type="text" class="form-control" value="{{ article.title_id }}"
+                                   name="title_id" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">所属人名称:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <input type="text" class="form-control" value="{{ article.account_ID }}"
+                                   name="account_ID" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">作者名称:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <input type="text" class="form-control" value="{{ article.owner_ID }}"
+                                   name="owner_ID">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">来源:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <input type="text" class="form-control"
+                                   value="{{ article.source }}" name="source">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-xl-3 col-lg-3 col-form-label">图片:</label>
+                        <div class="col-lg-9 col-xl-6">
+                            <div class="kt-avatar kt-avatar--outline" id="kt_user_avatar_1">
+                                <div class="kt-avatar__holder"
+                                     style="background-image: url(/static/{{ article.thumbnail_image }});width:150px;height: 150px"></div>
+                                <label class="kt-avatar__upload" data-toggle="kt-tooltip" title=""
+                                       data-original-title="Change avatar">
+                                    <i class="fa fa-pen"></i>
+                                    <input type="file" name="thumbnail_image" accept=".png, .jpg, .jpeg">
+                                </label>
+                                <span class="kt-avatar__cancel" data-toggle="kt-tooltip" title=""
+                                      data-original-title="Cancel avatar">
+                                                    <i class="fa fa-times"></i>
+                                                </span>
+                            </div>
+                            <span class="form-text text-muted">Allowed file types:  png, jpg, jpeg.</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">是否允许讨论:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                           <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+							<label>
+                                <input type="checkbox" {% if  article.allow_comments %}checked{% endif %}  name="allow_comments" >
+                                <span></span>
+							</label>
+							</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">是否置顶:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                                <label>
+                                    <input type="checkbox" {% if  article.is_show %}checked{% endif %} name="is_show">
+                                    <span></span>
+                                </label>
+							</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">审核是否通过:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                                <label>
+                                    <input type="checkbox" {% if  article.process_state %}checked{% endif %}  name="process_state">
+                                    <span></span>
+                                </label>
+							</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">栏目编号:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <select class="form-control" id="kt_multipleselectsplitter_1" name="channel_ID">
+                                <optgroup label="Category 1">
+                                    <option value="1">Choice 1</option>
+                                    <option value="2">Choice 2</option>
+                                    <option value="3">Choice 3</option>
+                                    <option value="4">Choice 4</option>
+                                </optgroup>
+                                <optgroup label="Category 2">
+                                    <option value="5">Choice 5</option>
+                                    <option value="6" selected>Choice 6</option>
+                                    <option value="7">Choice 7</option>
+                                    <option value="8">Choice 8</option>
+                                </optgroup>
+                                <optgroup label="Category 3">
+                                    <option value="5">Choice 9</option>
+                                    <option value="6">Choice 10</option>
+                                    <option value="7">Choice 11</option>
+                                    <option value="8">Choice 12</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">栏目名称:</label>
+                        <div class="col-lg-4 col-md-9 col-sm-12">
+                            <input type="text" class="form-control" value="{{ article.channel_name  }}"
+                                   name="channel_name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3 col-sm-12">是否公开:</label>
+                        <div class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                            <span class="kt-switch kt-switch--success">
+                                <label>
+                                    <input type="checkbox" {% if  article.privacy_level %}checked{% endif %} name="privacy_level">
+                                    <span></span>
+                                </label>
+							</span>
+                        </div>
+                    </div>
+                    <div class="form-group  row">
+        				<label class="col-form-label col-lg-3 col-sm-12">标签</label>
+        				<div class="col-lg-6 col-md-9 col-sm-12">
+                            <input id="kt_tagify_1" name='tags' placeholder='添加Tags' value='{{ article.tags  }}'>
+
+                            <div class="kt-margin-t-10">
+                                添加标签
+                            </div>
+        				</div>
+        			</div>
+
+                </div>
+                <div class="kt-portlet__foot">
+                    <div class="">
+                        <div class="row">
+                            <div class="col-lg-9 ml-lg-auto">
+                                <a href="javascript:history.back(-1)" id="kt_notify_btn"
+                                   class="btn btn-success">返回</a>
+                                <button type="submit" class="btn btn-secondary">修改</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

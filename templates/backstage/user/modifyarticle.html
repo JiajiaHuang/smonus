@@ -1,0 +1,90 @@
+
+{% extends 'backstage/user/base.html' %}
+
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+{% block title %}欢迎来到后台管理系统{% endblock %}
+{% block hightcss %}
+    <link rel="stylesheet" href="{% static 'backstage/css/jquery.tagsinput.css' %}" />
+    <link rel="stylesheet" href="{% static 'backstage/css/prettify.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'backstage/css/switchery.min.css' %}" />
+    <style>
+
+    .x_panel img{
+        height: 700px;
+    }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>文章查看 <small>欢迎您使用WAITING博客后台</small></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% include "backstage/user/recommend/modifyarticletable.html" %}
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block hightjs %}
+    <script src={% static "backstage/js/jquery.tagsinput.js" %}></script>
+    <script src={% static "backstage/js/prettify.js" %}></script>
+    <script src={% static "backstage/js/moment.min.js" %}></script>
+    <script src={% static "backstage/js/bootstrap-wysiwyg.min.js" %}></script>
+    <script src={% static "backstage/js/jquery.hotkeys.js" %}></script>
+    <script src={% static "backstage/js/switchery.min.js" %}></script>
+    <script src={% static "backstage/js/jquery.cookie.js" %}></script>
+
+    <script>
+
+        var csrftoken = $.cookie('csrftoken');
+            function csrfSafeMethod(method) {
+                // these HTTP methods do not require CSRF protection
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
+        console.log(window.location.href);
+        var values = window.location.href;
+        var title_num =values.split('/')[5];
+
+
+        $("#submit").click(function(){
+                $.ajax({
+                    url: '{% url "user/modifyarticlepost" %}',
+                    type: "post",
+                    headers: {'Content-Type': 'application/json',"X-CSRFToken":csrftoken},
+                    data: JSON.stringify({
+                        title:$("#title").val(),
+                        web_title:$("#web_title").val(),
+                        editor:$("#editor")[0].innerHTML,
+                        tags_1:$("#tags_1").val(),
+                        web_description:$("#web_description").val(),
+                        title_num:title_num,
+                        submit:1,
+                    })
+                }).done(function (data) {
+                    //alert("成功");                    alert("请求失败");
+
+                    window.location.href = "/article/"+data;
+                    //window.location.href ="http://127.0.0.1:8000/userauth"
+                    }).fail(function () {
+                });
+            });
+
+    </script>
+{% endblock %}

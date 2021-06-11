@@ -1,0 +1,23 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="search">
+        <button id="btn-search-close" class="btn btn--search-close" aria-label="{% trans "Close search form" %}"> <i class="ti-close"></i></button>
+        <form class="search__form" action="javascript:void(0)" method="post">
+            <input class="search__input" name="search" type="search" placeholder="{% trans "Search and hit enter..." %}"/>
+            <span class="search__info">{% trans "Hit enter to search or ESC to close" %}</span>
+        </form>
+        <div class="search__related">
+            <div class="search__suggestion">
+        <h3>{% trans "May We Suggest?" %}</h3>
+        <p>#drone #funny #catgif #broken #lost #hilarious #good #red #blue #nono #why #yes #yesyes #aliens #green</p>
+            </div>
+            <div class="search__suggestion">
+        <h3>{% trans "Is It This?" %}</h3>
+        <p>#good #red #hilarious #blue #nono #why #yes #yesyes #aliens #green #drone #funny #catgif #broken #lost</p>
+            </div>
+            <div class="search__suggestion">
+        <h3>{% trans "Needle, Where Art Thou?" %}</h3>
+        <p>#broken #lost #good #red #funny #hilarious #catgif #blue #nono #why #yes #yesyes #aliens #green #drone</p>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,71 @@
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{% static "backstage/image/waiting.png" %}" type="image/ico" />
+
+    <title>{% block title %}默认标题{% endblock %}</title>
+
+    <!-- Css -->
+      <link rel="stylesheet" href="{% static 'backstage/css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" href="{% static 'backstage/css/font-awesome.min.css' %}" />
+      <link rel="stylesheet" href="{% static 'backstage/css/nprogress.css' %}" />
+      <link rel="stylesheet" href="{% static 'backstage/css/green.css' %}" />
+      <link rel="stylesheet" href="{% static 'backstage/css/bootstrap-progressbar-3.3.4.min.css' %}" />
+      <link rel="stylesheet" href="{% static 'backstage/css/jqvmap.min.css' %}" />
+      {% block hightcss %}
+
+      {% endblock %}
+      <link rel="stylesheet" href="{% static 'backstage/css/custom.min.css' %}" />
+  </head>
+  <body class="nav-md">
+     {% if user.is_authenticated  %}
+      <div class="container body">
+          <div class="main_container">
+              {% include "backstage/user/leftcol.html" %}
+              {% include "backstage/user/topnav.html" %}
+              {% block content %}
+              {% endblock %}
+              {% include "backstage/user/footer.html" %}
+          </div>
+      </div>
+     {% else %}
+         <div class="container body">
+      <div class="main_container">
+        <!-- page content -->
+        <div class="col-md-12">
+          <div class="col-middle">
+            <div class="text-center text-center">
+              <h1 class="error-number">401</h1>
+              <h2>小伙子你还没有登录~</h2>
+              <p>请登入，在~ <a href="{% url "user/login.html" %}">点击?</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+      </div>
+    </div>
+     {% endif %}
+    <!-- jQuery -->
+    <script src={% static "backstage/js/jquery.min.js" %}></script>
+     <script src={% static "backstage/js/jquery.cookie.js" %}></script>
+
+    <!-- Bootstrap -->
+    <script src={% static "backstage/js/bootstrap.min.js" %}></script>
+    <!-- FastClick -->
+    <script src={% static "backstage/js/fastclick.js" %}></script>
+
+    <script src={% static "backstage/js/date.js" %}></script>
+    <script src={% static "backstage/js/date-zh-SG.js" %}></script>
+    <script src={% static "backstage/js/custom.min.js" %}></script>
+      {% block hightjs %}
+      {% endblock %}
+  </body>
+</html>

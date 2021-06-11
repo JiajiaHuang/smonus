@@ -1,0 +1,63 @@
+{% extends 'front/black/base-black.html' %}
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+{% block title %}欢迎来到后台管理系统{% endblock %}
+{% block hightcss %}
+    <link href="{% static 'front/assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'front/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/animsition.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/themify-icons/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/bootsnav.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/fluidbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'front/assets/css/flexslider.css' %}" rel="stylesheet">
+
+    <link href="{% static 'front/assets/css/style.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block bodymain %}
+    <div class="main-content ">
+        {% include "front/black/header/top-header.html" %}
+        {% include "front/black/header/wrap-sticky.html" %}
+        {% include "front/black/header/user-modal.html" %}
+        <div class="clearfix"></div>
+
+        {% include "front/package/search.html" %}
+        {% include "front/package/newstricker-inner.html" %}
+        {% include "front/package/page-header.html" %}
+
+        {% include "front/package/404.html" %}
+        {% include "front/package/newslatter.html" %}
+        {% include "front/package/insta-content.html" %}
+        {% include "front/black/footer/footer-black.html" %}
+
+    </div>
+
+{% endblock %}
+
+{% block script %}
+        <script src="{% static 'front/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/animsition.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/bootsnav.js' %}"></script>
+        <script src="{% static 'front/assets/js/macy.js' %}"></script>
+        <script src="{% static 'front/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/ResizeSensor.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/theia-sticky-sidebar.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'front/assets/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/modernizr.custom.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.gridrotator.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/parallax-background.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.simpleSocialShare.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.fluidbox.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/retina.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/jquery.shuffle.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/readingTime.min.js' %}"></script>
+        <script src="{% static 'front/assets/js/custom.js' %}"></script>
+
+{% endblock %}

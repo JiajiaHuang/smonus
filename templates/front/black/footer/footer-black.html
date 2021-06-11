@@ -1,0 +1,92 @@
+{% load staticfiles %}
+{% load i18n %}
+            <footer class="footer-black">
+                <div class="main-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-3">
+                                <div class="footer-box">
+                                    <h3 class="widget-title title-white">{% trans "Contact us" %}</h3>
+
+                                    <div class="textwidget">
+                                        <p>
+                                            <strong>
+                                                {% trans "Email" %}
+                                            </strong>
+                                        </p>
+                                        <p>{% trans "Info" %}:<a href="mailto:{{contact_info_List.emailone.contact_url}}">{{contact_info_List.emailone.contact_url}}</a></p>
+                                        <p>{% trans "After-sale" %}:<a href="mailto:{{contact_info_List.emailtwo.contact_url}}">{{contact_info_List.emailtwo.contact_url}}</a></p>
+                                        <p>
+                                            <strong>
+                                                {% trans "Phone" %}
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            {{contact_info_List.footers_phone.contact_info|safe}}
+                                            <br>
+
+                                            <!---->
+                                        </p>
+                                        <p>
+                                            <strong>
+                                                {% trans "Address" %}
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            <small>
+                                                {{contact_info_List.footers_address.contact_info}}
+                                            </small>
+                                            <br>
+                                            <!---->
+                                        </p>
+                                    </div>
+                                    <p><strong>{% trans "Returning your order?" %}</strong></p>
+                                   <p> <a href="{{contact_info_List.click_here_url.contact_url}}">{{contact_info_List.click_here_url.contact_name}}</a></p>
+
+                                </div>
+                            </div>
+                            <div class="hidden-sm col-md-3">
+                                <div class="footer-box">
+                                    <h3 class="widget-title title-white">{% trans "From the blog" %}</h3>
+                                        <ul class="footer-cat">
+                                        <li><a href="#">Our Community</a></li>
+                                        <li><a href="#">See Our Portfolio</a></li>
+                                        <li><a href="#">Story About Us</a></li>
+                                        <li><a href="#">Keep in Touch</a></li>
+                                        <li><a href="#">Purchase Our Products</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-3">
+                                <div class="footer-box">
+                                    <h3 class="widget-title title-white">{% trans "Information" %}</h3>
+                                    <ul class="footer-cat">
+                                        <li><a href="#">Our Community</a></li>
+                                        <li><a href="#">See Our Portfolio</a></li>
+                                        <li><a href="#">Story About Us</a></li>
+                                        <li><a href="#">Keep in Touch</a></li>
+                                        <li><a href="#">Purchase Our Products</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-3">
+                                <div class="footer-box">
+                                    <h3 class="widget-title title-white">{% trans "Popular" %}</h3>
+                                    <ul class="footer-cat">
+                                        <li><a href="#">Our Community</a></li>
+                                        <li><a href="#">See Our Portfolio</a></li>
+                                        <li><a href="#">Story About Us</a></li>
+                                        <li><a href="#">Keep in Touch</a></li>
+                                        <li><a href="#">Purchase Our Products</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-footer">
+                     {{contact_info_List.footers_copyright.contact_info | safe}}
+
+                </div>
+            </footer>

@@ -1,0 +1,1000 @@
+msgid,msgstr
+中文简体,中文 简体
+English,Inglés
+Traditional Chinese,Chino tradicional
+Contact us,Contáctenos
+Email,Email
+Phone,Teléfono
+Address,Habla a
+"457 BIgBlue Street, Suite 4A<br>New York, NY 10013","457 BigBlue Street, Suite 4A <br> Nueva York, NY 10013"
+Returning your order?,Volviendo a su fin?
+Click Here!,?Haga clic aquí!
+From the blog,Desde el blog
+Information,Información
+Popular,Popular
+WIGS,WIGS
+Human Hair,Cabello humano
+Synthetic,Sintético
+Lace Front,frente del cordón
+Brands,marcas
+News,Noticias
+Photos & Reviews,Fotos y Comentarios
+Care,Cuidado
+Contact,Contacto
+about,acerca de
+Buy now!,?Compra ahora!
+Login,Iniciar sesión
+Register,Registrarse
+Log in,Iniciar sesión
+Sign In,Registrarse
+Chose One of the Following Methods.,Eligió uno de los métodos siguientes.
+With Facebook,con Facebook
+With Google +,Con Google +
+Or,O
+Sign in Using Your Email Address,Inicie sesión con su dirección de correo electrónico
+Username or email,Nombre de usuario o correo electrónico
+Password,Contrase?a
+Remember me,Recuérdame
+Forgot Password?,?Se te olvidó tu contrase?a?
+Don't have an account?,?No tienes una cuenta?
+Sign up Now,Regístrate ahora
+Sign Up For Free,Registrate gratis
+Your Name,Tu nombre
+Your Email Address,Tu correo electrónico
+Your Company Name,El nombre de tu compa?ía
+Enter Your Password,Ingresa tu contrase?a
+Retype Your Password,Reescribe tu contrase?a
+Your Password at Global Crypto are encrypted and Secured,Su contrase?a de Global Crypto están cifradas y protegidas
+Sign Up,Regístrate
+Custom Pages,páginas personalizadas
+Latest Post,?ltima publicación
+Subscribe,Suscribir
+Page,Página
+Not Found,Extraviado
+"Sorry, but the page you are looking for has note been found. Try checking the URL for error, then hit the refresh button on your browser or try found something else in our app.","Lo sentimos, pero la página que busca ha encontrado nota. Intente comprobar la dirección URL para el error, después haga clic en el botón de actualización de su navegador o tratar encontrado algo más en nuestra aplicación."
+Contact Info,Datos de contacto
+Email Address,Dirección de correo electrónico
+Phone Number,Número de teléfono
+Support,Apoyo
+Sales,Ventas
+Feedback,Realimentación
+Name,Nombre
+Website,Sitio web
+Submit,Enviar
+Follow Me!,?Sígueme!
+Sign Up for Our <em>Newsletter</em>,Suscríbase a nuestro <em> Boletín </ em>
+Subscribe now to get notified about exclusive offers<br> from The .... every week!,Suscríbase ahora para ser notificado sobre ofertas exclusivas En venta El .... todas las semanas!
+Your email address,Tu correo electrónico
+<strong>Trending</strong> Now,<strong> Tendencia </ strong> Ahora
+page,página
+Home,Hogar
+Close search form,Cerrar el formulario de búsqueda
+Search and hit enter...,Buscar y pulsa enter ...
+Hit enter to search or ESC to close,Pulse Enter para buscar o ESC para cerrar
+May We Suggest?,Podemos sugerir?
+Is It This?,?Es esto?
+"Needle, Where Art Thou?","Aguja, ?dónde estás?"
+Messages,mensajes
+Site Maps,Mapas del sitio
+Static Files,Los archivos estáticos
+Syndication,Sindicación
+That page number is not an integer,Ese número de página no es un entero
+That page number is less than 1,Ese número de página es menor que 1
+That page contains no results,Esa página no contiene resultados
+Enter a valid value.,Introduce un valor valido.
+Enter a valid URL.,Introducir una URL válida.
+Enter a valid integer.,Introduzca un número entero válido.
+Enter a valid email address.,Introduzca una dirección de correo electrónico válida.
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens.","Introduzca una 'bala' válido que consta de letras, números, guiones o guiones."
+"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or hyphens.","Introduzca una 'bala' válido que consta de letras, números de Unicode, guiones o guiones."
+Enter a valid IPv4 address.,Introduzca una dirección IPv4 válida.
+Enter a valid IPv6 address.,Introduzca una dirección IPv6 válida.
+Enter a valid IPv4 or IPv6 address.,Introduzca una dirección IPv4 o IPv6 válida.
+Enter only digits separated by commas.,Sólo introducir dígitos separados por comas.
+Ensure this value is %(limit_value)s (it is %(show_value)s).,Asegúrese de que este valor es% (limit_value) s (es% (show_value) s).
+Ensure this value is less than or equal to %(limit_value)s.,Asegúrese de este valor es menor que o igual a% (limit_value) s.
+Ensure this value is greater than or equal to %(limit_value)s.,Asegúrese de este valor es mayor que o igual a% (limit_value) s.
+Ensure this value has at least %(limit_value)d character (it has %(show_value)d).,Asegúrese de que este valor tiene al menos d carácter% (limit_value) (que tiene (show_value) d%).
+Ensure this value has at most %(limit_value)d character (it has %(show_value)d).,Asegúrese de que este valor tiene a lo sumo d carácter% (limit_value) (que tiene (show_value) d%).
+Enter a number.,Ingrese un numero.
+Ensure that there are no more than %(max)s digit in total.,Asegúrese de que no hay más que% dígitos (max) s en total.
+Ensure that there are no more than %(max)s decimal place.,Asegúrese de que no hay más de% son (max) s decimal.
+Ensure that there are no more than %(max)s digit before the decimal point.,Asegúrese de que no hay más que% (max) s dígitos antes del punto decimal.
+File extension '%(extension)s' is not allowed. Allowed extensions are: '%(allowed_extensions)s'.,No se permite la extensión de archivo '% (extensión) s'. extensiones permitidas son: '% (allowed_extensions) s'.
+Null characters are not allowed.,caracteres nulos no están permitidos.
+and,y
+%(model_name)s with this %(field_labels)s already exists.,"=IFERROR(__xludf.DUMMYFUNCTION(""GoogleTranslate(A106, """"en"""", """"es"""")""),""% (Nombre_del_modelo) s con este% (field_labels) s ya existe."")"
+Value %(value)r is not a valid choice.,Valor% (valor) r no es una opción válida.
+This field cannot be null.,Este campo no puede ser nulo.
+This field cannot be blank.,Este campo no puede estar vacío.
+%(model_name)s with this %(field_label)s already exists.,% (Nombre_del_modelo) s con este% (field_label) s ya existe.
+%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s.,% (Field_label) s debe ser único para% (date_field_label) s% (lookup_type) s.
+Field of type: %(field_type)s,Campo de tipo:% (field_type) s
+Integer,Entero
+'%(value)s' value must be an integer.,'% (Valor) s' valor debe ser un entero.
+Big (8 byte) integer,Grande (8 byte) número entero
+'%(value)s' value must be either True or False.,'% (Valor) s' valor debe ser verdadero o falso.
+"'%(value)s' value must be either True, False, or None.","'% (Valor) s' valor debe ser verdadera, falsa o Ninguno."
+Boolean (Either True or False),Booleano (verdadero o falso)
+String (up to %(max_length)s),String (hasta% (max_length) s)
+Comma-separated integers,enteros separados por comas
+'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD format.,'% (Valor) s' tiene un valor de formato de fecha no válida. Debe estar en formato AAAA-MM-DD.
+'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid date.,"'% (Valor) s' valor tiene el formato correcto (AAAA-MM-DD), pero es una fecha no válida."
+Date (without time),Fecha (sin tiempo)
+'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.,'% (Valor) s' valor tiene un formato no válido. Debe estar en AAAA-MM-DD HH: MM [: ss [] .uuuuuu] formato [TZ].
+'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time.,"'% (Valor) s' valor tiene el formato correcto (AAAA-MM-DD HH: MM [: ss [.uuuuuu]] [TZ]), pero es una fecha / hora no válida."
+Date (with time),Fecha (con el tiempo)
+'%(value)s' value must be a decimal number.,'% (Valor) s' valor debe ser un número decimal.
+Decimal number,Número decimal
+'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[.uuuuuu] format.,'% (Valor) s' valor tiene un formato no válido. Debe estar en [DD] [HH: [MM:]] ss formato [.uuuuuu].
+Duration,Duración
+Email address,Dirección de correo electrónico
+File path,Ruta de archivo
+'%(value)s' value must be a float.,'% (Valor) s' valor debe ser un flotador.
+Floating point number,número de punto flotante
+IPv4 address,dirección IPv4
+IP address,dirección IP
+"'%(value)s' value must be either None, True or False.","'% (Valor) s' valor debe ser Ninguno, Verdadero o Falso."
+"Boolean (Either True, False or None)","Booleano (Verdadero, Falso o ninguno)"
+Positive integer,Entero positivo
+Positive small integer,peque?o número entero positivo
+Slug (up to %(max_length)s),Slug (hasta% (max_length) s)
+Small integer,Peque?o número entero
+Text,Texto
+'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] format.,'% (Valor) s' valor tiene un formato no válido. Debe estar en HH: MM [: ss [.uuuuuu]] formato.
+'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an invalid time.,"'% (Valor) s' valor tiene el formato correcto (HH: MM [: ss [.uuuuuu]]), pero es un tiempo no válido."
+Time,Hora
+URL,URL
+Raw binary data,datos binarios sin
+'%(value)s' is not a valid UUID.,'% (Valor) s' no es un UUID válido.
+Universally unique identifier,identificador único universal
+File,Archivo
+Image,Imagen
+%(model)s instance with %(field)s %(value)r does not exist.,% (Modelo) s ejemplo con% (campo) s% no existe (valor) r.
+Foreign Key (type determined by related field),Clave foránea (tipo determinado por el campo relacionado)
+One-to-one relationship,Uno-a-uno
+%(from)s-%(to)s relationship,% (De) s -% (a) la relación s
+%(from)s-%(to)s relationships,% (De) s -% (a) s relaciones
+Many-to-many relationship,Muchos-a-muchos relación
+:?.!,:?.!
+This field is required.,Este campo es requerido.
+Enter a whole number.,Introduzca un número entero.
+Enter a valid date.,Introduzca una fecha válida.
+Enter a valid time.,Introduzca una hora válida.
+Enter a valid date/time.,Introduzca una fecha / hora válida.
+Enter a valid duration.,Introducir una duración válida.
+The number of days must be between {min_days} and {max_days}.,El número de días que debe estar entre {} y {MIN_DAYS MAX_DAYS}.
+No file was submitted. Check the encoding type on the form.,se presentó ningún archivo. Compruebe el tipo de codificación en el formulario.
+No file was submitted.,se presentó ningún archivo.
+The submitted file is empty.,El archivo enviado está vacía.
+Ensure this filename has at most %(max)d character (it has %(length)d).,Asegúrese de que este nombre de fichero tiene como máximo d carácter% (max) (que tiene (longitud) d%).
+"Please either submit a file or check the clear checkbox, not both.","Por favor, envíe un archivo o marque la casilla de verificación clara, no tanto."
+Upload a valid image. The file you uploaded was either not an image or a corrupted image.,Sube una imagen válida. El archivo que ha cargado no era ya sea una imagen o una imagen da?ada.
+Select a valid choice. %(value)s is not one of the available choices.,Seleccione una opción válida. % (Valor) s no es una de las opciones disponibles.
+Enter a list of values.,Introducir una lista de valores.
+Enter a complete value.,Introduzca un valor completa.
+Enter a valid UUID.,Introduzca un UUID válido.
+:,:
+(Hidden field %(name)s) %(error)s,(Campo oculto% (nombre) s)% (error) s
+ManagementForm data is missing or has been tampered with,ManagementForm de datos se encuentra o ha sido manipulado
+Please submit %d or fewer forms.,"Por favor, envíe% d o menor número de formas."
+Please submit %d or more forms.,"Por favor, envíe% d o más formas."
+Order,Orden
+Delete,Eliminar
+Please correct the duplicate data for %(field)s.,"Por favor, corrija los datos duplicados para% (campo) s."
+"Please correct the duplicate data for %(field)s, which must be unique.","Por favor, corrija los datos duplicados para% (campo) s, que debe ser único."
+Please correct the duplicate data for %(field_name)s which must be unique for the %(lookup)s in %(date_field)s.,"Por favor, corrija los datos duplicados para% (FIELD_NAME) s que debe ser único para el% (de búsqueda) s en% (date_field) s."
+Please correct the duplicate values below.,"Por favor, corrija los valores duplicados a continuación."
+The inline value did not match the parent instance.,El valor en línea no coincide con el ejemplo de los padres.
+Select a valid choice. That choice is not one of the available choices.,Seleccione una opción válida. Esa elección no es una de las opciones disponibles.
+"""%(pk)s"" is not a valid value.","""% (Pk) s"" no es un valor válido."
+%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it may be ambiguous or it may not exist.,% (Fecha y hora) s no podía interpretarse en la zona horaria% (CURRENT_TIMEZONE) s; puede ser ambigua o puede no existir.
+Clear,Claro
+Currently,Actualmente
+Change,Cambio
+Unknown,Desconocido
+Yes,si
+No,No
+"yes,no,maybe",si no talvez
+%(size)d byte,% (Tama?o) byte d
+%s KB,% S KB
+%s MB,% S MB
+%s GB,% S GB
+%s TB,% S TB
+%s PB,% S PB
+p.m.,pm.
+a.m.,a.m.
+PM,PM
+AM,A.M
+midnight,medianoche
+noon,mediodía
+Monday,lunes
+Tuesday,martes
+Wednesday,miércoles
+Thursday,jueves
+Friday,viernes
+Saturday,sábado
+Sunday,domingo
+Mon,Lun
+Tue,mar
+Wed,Mie
+Thu,Jue
+Fri,Vie
+Sat,Se sentó
+Sun,Dom
+January,enero
+February,febrero
+March,marzo
+April,abril
+May,Mayo
+June,junio
+July,julio
+August,agosto
+September,septiembre
+October,octubre
+November,noviembre
+December,diciembre
+jan,ene
+feb,feb
+mar,mar
+apr,abr
+may,mayo
+jun,jun
+jul,jul
+aug,ago
+sep,sep
+oct,oct
+nov,nov
+dec,dic
+Jan.,Ene.
+Feb.,Feb.
+March,marzo
+April,abril
+May,Mayo
+June,junio
+July,julio
+Aug.,Ago.
+Sept.,Septiembre
+Oct.,Oct.
+Nov.,Nov.
+Dec.,Dic.
+January,enero
+February,febrero
+March,marzo
+April,abril
+May,Mayo
+June,junio
+July,julio
+August,agosto
+September,septiembre
+October,octubre
+November,noviembre
+December,diciembre
+This is not a valid IPv6 address.,Esta no es una dirección IPv6 válida.
+%(truncated_text)s…,% (TRUNCATED_TEXT) s ...
+or,o
+", ",","
+%d year,% D a?os
+%d month,% D meses
+%d week,% D semanas
+%d day,% D día
+%d hour,% D hora
+%d minute,% D minutos
+0 minutes,0 minutos
+name,nombre
+Forbidden,Prohibido
+CSRF verification failed. Request aborted.,verificación CSRF falló. Solicitud abortado.
+"You are seeing this message because this HTTPS site requires a 'Referer header' to be sent by your Web browser, but none was sent. This header is required for security reasons, to ensure that your browser is not being hijacked by third parties.","Usted está viendo este mensaje porque este sitio HTTPS requiere una 'cabecera Referer' para ser enviada por su navegador de Internet, pero fue enviado ninguna. Se requiere esta encabezado por razones de seguridad, para garantizar que su navegador no está siendo secuestrado por terceros."
+"If you have configured your browser to disable 'Referer' headers, please re-enable them, at least for this site, or for HTTPS connections, or for 'same-origin' requests.","Si ha configurado su navegador para desactivar los encabezados 'Referer', por favor, vuelva a habilitar, al menos para este sitio, o para las conexiones HTTPS, o de las solicitudes de los mismos de origen."
+"If you are using the <meta name=""referrer"" content=""no-referrer""> tag or including the 'Referrer-Policy: no-referrer' header, please remove them. The CSRF protection requires the 'Referer' header to do strict referer checking. If you're concerned about privacy, use alternatives like <a rel=""noreferrer"" ...> for links to third-party sites.","Si está utilizando la etiqueta <meta name = contenido de ""referencia"" = ""no-referencia""> etiqueta o incluyendo el 'Referente-Política: sin referente' de cabecera, por favor eliminarlos. La protección CSRF requiere la cabecera 'Referer' para hacer la comprobación estricta árbitro. Si usted está preocupado acerca de la privacidad, el uso de alternativas como <a rel=""noreferrer"" ...> de enlaces a sitios de terceros."
+"You are seeing this message because this site requires a CSRF cookie when submitting forms. This cookie is required for security reasons, to ensure that your browser is not being hijacked by third parties.","Usted está viendo este mensaje porque este sitio requiere una cookie CSRF al presentar formas. Se requiere esta cookie por razones de seguridad, para garantizar que su navegador no está siendo secuestrado por terceros."
+"If you have configured your browser to disable cookies, please re-enable them, at least for this site, or for 'same-origin' requests.","Si ha configurado su navegador para deshabilitar las cookies, por favor, vuelva a habilitar, al menos para este sitio, o de las solicitudes de los mismos de origen."
+More information is available with DEBUG=True.,Más información está disponible con debug = true.
+No year specified,No se especifica el a?o
+Date out of range,Fecha fuera de rango
+No month specified,Sin mes especificado
+No day specified,No hay día especificado
+No week specified,No se especifica la semana
+No %(verbose_name_plural)s available,Sin% (verbose_name_plural) s disponibles
+Future %(verbose_name_plural)s not available because %(class_name)s.allow_future is False.,Futuro% (verbose_name_plural) s no disponible debido% (class_name) s.allow_future es falso.
+Invalid date string '%(datestr)s' given format '%(format)s',cadena de fecha no válido '% (datestr) s' dada formato '% (formato) s'
+No %(verbose_name)s found matching the query,Sin% (verbose_name) s resultados que coinciden con la consulta
+"Page is not 'last', nor can it be converted to an int.","Página no es 'última', ni puede ser convertido a un int."
+Invalid page (%(page_number)s): %(message)s,de página no válida (% (PAGE_NUMBER) s):% s (mensaje)
+Empty list and '%(class_name)s.allow_empty' is False.,Lista vacía y '% (class_name) s.allow_empty' es falso.
+Directory indexes are not allowed here.,los índices de directorio no están permitidos aquí.
+"""%(path)s"" does not exist","""% (Ruta de acceso) s"" no existe"
+Index of %(directory)s,?ndice de% s (directorio)
+Django: the Web framework for perfectionists with deadlines.,Django: el framework web para perfeccionistas con los plazos.
+"View <a href=""https://docs.djangoproject.com/en/%(version)s/releases/"" target=""_blank"" rel=""noopener"">release notes</a> for Django %(version)s","Ver <a target=""_blank"" href=""https://docs.djangoproject.com/en/%(version)s/releases/"" rel=""noopener""> notas de la versión </a> para Django% (versión) s"
+The install worked successfully! Congratulations!,La instalación funcionó correctamente! ?Felicidades!
+"You are seeing this page because <a href=""https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug"" target=""_blank"" rel=""noopener"">DEBUG=True</a> is in your settings file and you have not configured any URLs.","Si está viendo esta página porque <a target=""_blank"" href=""https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug"" rel=""noopener""> debug = true </a> está en el archivo de configuración y no se ha configurado ningún URL."
+Django Documentation,Documentación Django
+"Topics, references, &amp; how-to's","Temas, referencias, & amp; cómo-a de"
+Tutorial: A Polling App,Tutorial: Un sondeo de aplicaciones
+Get started with Django,Comience con Django
+Django Community,Comunidad Django
+"Connect, get help, or contribute","Conectar, obtener ayuda o contribuye"
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,

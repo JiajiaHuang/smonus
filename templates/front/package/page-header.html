@@ -1,0 +1,16 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="parallax page_header"  data-parallax-bg-image="{{'/static/front/assets/img/header-bg.jpg'}}" data-parallax-direction="left">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>{{ a }}</h3>
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'index.html' %}">{% trans "Home" %}</a></li>
+                    <li class="active">{{ a }}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{% load staticfiles %} <!-- 模板标签加载静态文件路径 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="DEscription" content="">
+    <meta name="Author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    {% block link %}{% endblock %}
+</head>
+<body>
+
+    <div class="clearfix"></div>
+
+
+    {% block script %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% load staticfiles %}
+{% load i18n %}
+<div class="top-header dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="header-nav" style="position: absolute;">
+                    <ul>
+                        <li><span class="headre-weather"><i
+                                class="fa fa-calendar-check-o"></i>&nbsp;{{ header_info.countryinfo.location_data }}</span>
+                        </li>
+                        <li><a href="{{ index_info.HeaderOne.page_url }}">{{ index_info.HeaderOne.page_name }}</a></li>
+                        <li><a href="{{ index_info.HeaderTwo.page_url }}">{{ index_info.HeaderTwo.page_name }}</a></li>
+                        <li><a href="{{ index_info.HeaderThere.page_url }}">{{ index_info.HeaderThere.page_name }}</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="/" id="dropdownMenu1" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="true">{% trans "Language" %}</a>
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="min-width: 120px;">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <li style="display: block;line-height: 27px;width: 100%">
+                                            <form action="{% url 'set_language' %}" method="post"
+                                                  id="lang_form">{% csrf_token %}
+                                                <button type="submit" name="language" value="{{ language.code }}"
+                                                        class="{% if language.code == LANGUAGE_CODE %}selected{% else %}demo-text-black{% endif %} dropdown-item"
+                                                        style="color: #0b0b0b;height: 30px;width: 100%">
+                                                    {{ language.name_local }}
+                                                </button>
+                                            </form>
+                                        </li>
+                                    {% endfor %}
+
+
+                                </ul>
+
+                            </div>
+
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <ul class="top-socia-share">
+                    <li>
+                        <a href="{{ index_info.HeaderIconOne.page_url }}"><i class="fa fa-facebook"></i></a>
+                        <a href="{{ index_info.HeaderIconTwo.page_url }}"><i class="fa fa-twitter"></i></a>
+                        <a href="{{ index_info.HeaderIconThree.page_url }}"><i class="fa fa-instagram"></i></a>
+                        <a href="{{ index_info.HeaderIconFour.page_url }}"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{ index_info.HeaderIconFive.page_url }}"><i class="fa fa-youtube-play"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#user-modal">{% trans "Login" %}
+                            / {% trans "Register" %}</a>
+                    </li>
+                    <li>
+                        <div class="weather-top">
+                            <i style="width:50px;height:50px;overflow:hidden;">
+                                <img src="/static/front/heweather/{{ header_info.weather.code }}.png"
+                                     style="transform: translateY(-30px);width:25px;height:25px;filter: drop-shadow(0px 30px 0rem rgb(255,255,255));">
+                            </i>
+                            <div class="weather-now">
+                                <span class="degrees">{{ header_info.weather.tmp }}</span>
+                                <span class="unit">C</span>
+                            </div>
+                            <div class="weather-city">{{ header_info.countryinfo.target_city }}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

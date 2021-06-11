@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!--begin::Portlet-->
+<div class="kt-portlet">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                URL文本信息管理
+            </h3>
+        </div>
+    </div>
+    <!--begin::Form-->
+
+    <div class="kt-section">
+        <div class="kt-section__content">
+            <div class="kt-portlet__body">
+                <span class="kt-section__info">
+                    Using the most basic table markup, here’s how tables look in Metronic:
+                </span>
+                <div class="kt-section">
+                    <div class="kt-section__content">
+
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>信息位置</th>
+                                <th>信息名称</th>
+                                <th>信息URL</th>
+                                <th>显示简体</th>
+                                <th>显示繁体</th>
+                                <th>显示英文</th>
+                                <th>显示法文</th>
+                                <th>显示西班牙文</th>
+                                <th>显示葡萄牙文</th>
+                                <th>
+                                    处理
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for foo in URL_Info %}
+                            <tr>
+                                <td>{{foo.page_where }}</td>
+                                <td>{{foo.page_info }}</td>
+                                <td>{{foo.page_url }}</td>
+                                <td>{{foo.page_name_zh_hans }}</td>
+                                <td>{{foo.page_name_zh_hant }}</td>
+                                <td>{{foo.page_name_en }}</td>
+                                <td>{{foo.page_name_fr }}</td>
+                                <td>{{foo.page_name_es }}</td>
+                                <td>{{foo.page_name_pt }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                            onclick="window.open('{% url 'change_url_info.html' %}?menu_order={{ foo.id }}','_self');"><i
+                                            class="la flaticon2-pen"></i></button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

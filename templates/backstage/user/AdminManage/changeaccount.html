@@ -1,0 +1,65 @@
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>子账号管理</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="table-responsive">
+                        <div class="row" style="    margin-right:5px;margin-left: 5px">
+                            <div class="col-sm-12">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title">编号</th>
+                            <th class="column-title">账号 </th>
+                            <th class="column-title">密码 </th>
+                            <th class="column-title no-link last">
+                                <span class="nobr">处理</span>
+                            </th>
+                            <th class="column-title no-link last">
+                                <span class="nobr">结果</span>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="even pointer">
+                            {% csrf_token %}
+                            <td class=" ">增加账号</td>
+                            <td class=" "><input type="text" id="zh" style="width: 100%" maxlength="300" /></td>
+                            <td class=" "><input type="text" id="mm" style="width: 100%" maxlength="300" /></td>
+                            <td class=" "><input type="button" value="上传" onclick="sc('add','#zh','#mm','#result')"/></td>
+                            <td class=" "><p id="result"></p></td>
+                        </tr>
+                        {% for foo in userall %}
+                            <tr class="even pointer">
+                                <td class=" ">账号{{ foo.id }}</td>
+                                <td class=" ">{{ foo.username }}</td>
+                                <td class=" "><input type="button" id="psw{{ foo.id }}" value="{{ foo.Clear_Password }}" onclick="sk('#psw{{ foo.id }}')"/></td>
+                                <td class=" last">
+                                    <input type="button" value="修改" onclick="sc('xg','{{ foo.username }}','#psw{{ foo.id }}','#result{{ foo.id }}')"/>
+                                    <input type="button" value="删除" onclick="sc('sc','{{ foo.username }}','#psw{{ foo.id }}','#result{{ foo.id }}')"/>
+                                </td>
+                                <td class=" "><p id="result{{ foo.id }}"></p></td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+                            </div>
+                        </div>
+
+                    </div>
+                  </div>
+
+              </div>
+            </div>

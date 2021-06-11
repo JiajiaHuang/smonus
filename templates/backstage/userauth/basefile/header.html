@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+
+    <!-- begin:: Header Menu -->
+    <!-- Uncomment this to display the close button of the panel
+<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+-->
+
+    {% include "backstage/userauth/basefile/header/headermenu.html" %}
+    <!-- end:: Header Menu -->
+    <!-- begin:: Header Topbar -->
+    {% include "backstage/userauth/basefile/header/headertopbar.html" %}
+    <!-- end:: Header Topbar -->
+</div>

@@ -1,0 +1,79 @@
+{% load staticfiles %}
+<!--begin::Portlet-->
+<div class="col-xl-12 col-lg-12 order-lg-3 order-xl-1">
+
+    <div class="kt-portlet">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    首页新闻list管理
+                </h3>
+            </div>
+        </div>
+        <!--begin::Form-->
+
+        <div class="kt-section">
+            <div class="kt-section__content">
+                <div class="kt-portlet__body">
+                <span class="kt-section__info">
+                    Using the most basic table markup, here’s how tables look in Metronic:
+                </span>
+                    <div class="kt-section">
+                        <div class="kt-section__content">
+
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <td>新闻名称</td>
+                                    <td>新闻URL</td>
+                                    <td>新闻简体</td>
+                                    <td>新闻繁体</td>
+                                    <td>新闻英文</td>
+                                    <td>新闻西班牙</td>
+                                    <td>新闻葡萄牙</td>
+                                    <th>
+                                        处理
+                                        <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                onclick="window.open('{% url 'add_news_list.html' %}','_self');"
+                                                style="float: right;height: 1.8rem;width: 1.8rem;"><i
+                                                class="la flaticon2-add-1" ></i></button>
+
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for news_info in News_Info %}
+
+                                    <tr>
+                                        <th scope="row">{{ news_info.id }}</th>
+                                        <td>{{ news_info.news_name }}</td>
+                                        <td>{{ news_info.news_url }}</td>
+                                        <td>{{ news_info.news_info_zh_hans }}</td>
+                                        <td>{{ news_info.news_info_zh_hant }}</td>
+                                        <td>{{ news_info.news_info_en }}</td>
+                                        <td>{{ news_info.news_info_es }}</td>
+                                        <td>{{ news_info.news_info_pt }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    onclick="window.open('{% url 'del_news_list.html' %}?menu_order={{ news_info.id }}','_self');">
+
+                                            <i class="la flaticon2-cross"></i></button>
+
+                                            <button type="button" class="btn btn-outline-brand btn-elevate btn-icon"
+                                                    onclick="window.open('{% url 'change_news_list.html' %}?menu_order={{ news_info.id }}','_self');">
+                                                  <i class="la flaticon2-pen" ></i></button>
+
+
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

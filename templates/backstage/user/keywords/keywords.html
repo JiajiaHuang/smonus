@@ -1,0 +1,93 @@
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>设置关键词</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+
+                    {% if site %}
+                        <form action="{% url "user/modifykeywordspost" %}?site={{ description.web_url }}" method="post">
+                      <div class="x_content">
+
+                        <div id="demo-form2"  data-parsley-validate class="form-horizontal form-label-left">
+                           <br />
+                            <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">网站名称<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label>
+                                    <select class="form-control" disabled>
+                                     <option>{{ description.web_url }}</option>
+                                   </select>
+                                </label>
+                            </div>
+                          </div>
+                            <br />
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">文章web标题<span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="web_title" name="web_title" required="required" value="{{ description.web_title }}" class="form-control col-md-7 col-xs-12">
+                            </div>
+                          </div>
+                            <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">文章web描述<span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="web_description" name="web_description" required="required" value="{{ description.web_description }}" class="form-control col-md-7 col-xs-12">
+                            </div>
+                          </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">文章web关键词</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="web_keywords" name="web_keywords" required="required" value="{{ description.web_keywords }}" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                            <br />
+
+                            <div class="form-group">
+                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                              <a type="button" class="btn btn-primary" href="/userauth/modifykeywords/">返回</a>
+                               <button class="btn btn-primary" name="save" id="save"  type="reset" >保存</button>
+                              <button type="submit" name="submit" id="submit" class="btn  btn-success">提交</button>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </form>
+
+                     {% else %}
+                     <div class="x_content">
+                        <div id="demo-form2"  data-parsley-validate class="form-horizontal form-label-left">
+                           <br />
+                            <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">网站名称<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label>
+                                    <select class="form-control myselect" id="myselect">
+                                            <option></option>
+                                        {% for foo in description %}
+                                            <option><a href="{{ foo.web_url }}">{{ foo.web_url }}</a></option>
+                                        {% endfor %}
+                                   </select>
+                                </label>
+                            </div>
+                          </div>
+                            <br />
+                        </div>
+                     </div>
+                    {% endif %}
+            </div>
+            </div>
+

@@ -1,0 +1,16 @@
+{% load staticfiles %}
+{% load i18n %}
+                <div class="newslatter">
+                <div class="container">
+                    <h3>{% trans "Sign Up for Our <em>Newsletter</em>" %}</h3>
+                    <p>{% trans "Subscribe now to get notified about exclusive offers<br> from The .... every week!" %}</p>
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{% trans "Your email address" %}" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">{% trans "Sign Up" %}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>

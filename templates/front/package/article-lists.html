@@ -1,0 +1,119 @@
+{% load staticfiles %}
+<div class="page-content">
+    <div class="container">
+        <div class="content-push">
+            <div class="breadcrumb-box" style="padding-bottom: 20px;border-bottom: 1px #ebebeb solid;">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">T-shirts</a>
+                <a href="#">Careers</a>
+                <a href="#">T-shirt Stampata</a>
+            </div>
+
+            {% for art in article.object_list %}
+            <div class="information-blocks" style="margin-bottom: 40px;">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 information-entry">
+                        <div class="product-detail-box" style="margin-bottom: 20px">
+                            <div class="comment_title">
+                                <div class="row">
+                                    <div class="col-sm-3 col-md-3 " style="text-align: center">
+                                                                                <a href="{{ art.title_url }}">
+
+                                        <img src="{{ art.thumbnail_image }}" alt=""
+                                             style="width: 90%;padding: 0px 10% ">
+                                                                                    </a>
+                                    </div>
+                                    <div class="col-sm-9 col-md-9 ">
+                                        <p class="comment-title" style=>
+                                            <strong>{{ art.channel_name }}: {{ art.updated|date:"M. d, Y" }}</strong></p>
+                                        <a href="blog/{{ art.title_url }}">
+                                            <h1 class="product-title" style="margin-top: 0px;">
+                                            {{ art.title }}
+                                            </h1>
+                                        </a>
+
+                                        <p>
+                                            {{ art.subtitle }}
+                                        </p>
+                                        <a href="blog/{{ art.title_url }}" class="btn link-btn btn-outline btn-rounded">Reading ⇾</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="share-box detail-info-entry" style="border-top: 0">
+                                <div class="title">
+                                    <div class="detail-info-entry" style="margin-bottom: 0px;">
+                                        {% for tag in art.tags %}
+                                        <a href="/tags/{{ tag.value }}">{{ tag.value }}</a>
+                                            {% if forloop.last %}
+                                                    {% else %}
+                                                        |
+                                                    {% endif %}
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                                <div class="socials-box">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="clear visible-xs visible-sm"></div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+
+            <div class="information-blocks" style="margin-bottom: 0px;padding: 0;">
+                <ul class="pagination">
+
+                    {% if article.has_previous %}
+                    <li >
+                        <a href="?page={{ article.previous_page_number }}">⇽</a></li>
+                    {% else %}
+                        <li class="disabled" ><a href="#!" >⇽</a></li>
+                    {% endif %}
+
+                      {% for page in article.pages %}
+                            {% if page %}
+                                {% ifequal page article.number %}
+                                 <li class="active"><a>{{ page }}<span class="sr-only">(current)</span></a></li>
+                                {% else %}
+                                 <li ><a href="?page={{ page }}">{{ page }}</a></li>
+                                {% endifequal %}
+                            {% else %}
+                                <li ><a href="#!">...</a></li>
+
+                            {% endif %}
+                        {% endfor %}
+
+
+                    {% if article.has_next %}
+                        <li> <a href="?{{ article.next_page_number.querystring }}">⇾</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="#!">⇾</a></li>
+                    {% endif %}
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
